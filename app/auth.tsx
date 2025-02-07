@@ -5,6 +5,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Dimensions,
+  Platform,
 } from "react-native";
 import { useRouter } from "expo-router";
 import * as LocalAuthentication from "expo-local-authentication";
@@ -25,6 +26,10 @@ export default function AuthScreen() {
 
   // Check if biometric authentication is available and enrolled
   const checkBiometrics = async () => {
+    if (Platform.OS === "web") {
+      setHasBiometrics(false);
+      return;
+    }
     const hasHardware = await LocalAuthentication.hasHardwareAsync();
     const isEnrolled = await LocalAuthentication.isEnrolledAsync();
     setHasBiometrics(hasHardware && isEnrolled);
@@ -36,17 +41,21 @@ export default function AuthScreen() {
       setIsAuthenticating(true);
       setError(null);
 
-      const hasHardware = await LocalAuthentication.hasHardwareAsync();
-      const hasBiometrics = await LocalAuthentication.isEnrolledAsync();
+      if (Platform.OS === "web") {
+        setError("Biometric authentication is not supported on web.");
+        setIsAuthenticating(false);
+        return;
+      }
 
       const auth = await LocalAuthentication.authenticateAsync({
-        promptMessage: hasHardware && hasBiometrics ? "Authenticate to continue" : "Enter your PIN",
+        promptMessage: hasBiometrics
+          ? "Authenticate to continue"
+          : "Enter your PIN",
         fallbackLabel: "Use PIN",
         cancelLabel: "Cancel",
       });
 
       if (auth.success) {
-        // Authentication successful, navigate to home screen
         router.replace("/home");
       } else {
         setError("Authentication failed. Please try again.");
@@ -147,10 +156,7 @@ const styles = StyleSheet.create({
     width: width - 40,
     alignItems: "center",
     shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
+    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
@@ -202,3 +208,4 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 });
+
