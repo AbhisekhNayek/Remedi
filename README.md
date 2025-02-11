@@ -1,50 +1,64 @@
-# Welcome to your Expo app 👋
+# 📢 Remedi - Medicine Reminder App 💊
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 🚀 Overview
+**Remedi** is a cross-platform mobile application designed to help users manage their medication schedules, track refills, and log progress efficiently. Built with **React Native** and **Expo**, it offers a seamless experience on both **iOS** and **Android** devices.
 
-## Get started
+## ✨ Features
+✅ **Medication Scheduling** - Set custom reminders for your medicines.  
+✅ **Refill Tracking** - Get alerts when supplies run low.  
+✅ **Biometric Authentication** - Secure access with **Face ID/Touch ID**.  
+✅ **Daily Progress Tracking** - Keep a history of your medication intake.  
+✅ **Calendar Integration** - Manage doses with an intuitive calendar.  
+✅ **Local Data Storage** - Secure and persistent storage with **AsyncStorage**.  
 
-1. Install dependencies
+## 🛠 Tech Stack
+- 📱 **React Native** - Cross-platform mobile development  
+- ⚡ **Expo** - Simplified development and native API access  
+- 🏗 **TypeScript** - Strongly-typed, scalable codebase  
+- 🔀 **React Navigation** - Smooth app navigation  
+- 🔔 **Expo Notifications** - Push notification system  
+- 💾 **AsyncStorage** - Local data persistence  
+- 🎨 **React Native Reanimated** - Fluid animations   
 
-   ```bash
-   npm install
-   ```
+## 📌 Project Highlights
+⭐ **Custom Medication Reminder System**  
+⭐ **Refill Tracking with Low Supply Alerts**  
+⭐ **Daily Progress Visualization**  
+⭐ **Secure Authentication Flow**  
+⭐ **Cross-Platform Compatibility**  
+⭐ **Clean & Modern UI Design**  
 
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+## 🔧 Installation & Setup
+1️⃣ Clone the repository:  
 ```bash
-npm run reset-project
+ git clone https://github.com/AbhisekhNayek/Remedi.git
+```
+2️⃣ Navigate to the project directory:  
+```bash
+ cd Remedi
+```
+3️⃣ Install dependencies:  
+```bash
+ npm install
+```
+4️⃣ Start the development server:  
+```bash
+ npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 📱 Screens
+🔹 **Authentication Screen** - Secure login/signup with biometrics  
+🔹 **Home Dashboard** - View upcoming medications & progress  
+🔹 **Medication Form** - Add & schedule medicines  
+🔹 **Calendar View** - Manage doses visually  
+🔹 **Notification System** - Get reminders at the right time  
 
-## Learn more
+## 🏗 Tools & Libraries
+- 🔷 **React Native** → [Website](https://reactnative.dev/)  
+- 🔷 **Expo** → [Website](https://expo.dev/)  
+- 🔷 **TypeScript** → [Website](https://www.typescriptlang.org/)  
+- 🔷 **React Navigation** → [Docs](https://reactnavigation.org/)  
+- 🔷 **Expo Notifications** → [Docs](https://docs.expo.dev/versions/latest/sdk/notifications/)  
 
-To learn more about developing your project with Expo, look at the following resources:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<p align="center">Made With ❤️ By Abhisekh</p>
